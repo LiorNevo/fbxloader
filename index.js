@@ -3512,7 +3512,9 @@ module.exports = {
         .slice(0, index)
         .concat(a2)
         .concat(a1.slice(index));
-    }
+	}
+	
+	return THREE.FBXLoader;
   })(),
   CannonHelper
 };
