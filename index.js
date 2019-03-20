@@ -2,8 +2,10 @@ var THREE = require("three");
 var Zlib = require("./inflate.min").Zlib;
 var CannonHelper = require('./CannonHelper').CannonHelper;
 var CannonDebugRenderer = require("./CannonDebugRenderer").CannonDebugRenderer;
+var Joystick = require('./Joystick').JoyStick;
 
 module.exports = {
+  Joystick,
   Zlib,
   CannonDebugRenderer,
   FBXLoader: (function() {
