@@ -1,6 +1,6 @@
 var THREE = require("three");
 var Zlib = require("./inflate.min").Zlib;
-var CannonHelper = require('./CannonHelper');
+var CannonHelper = require('./CannonHelper').CannonHelper;
 var CannonDebugRenderer = require("./CannonDebugRenderer").CannonDebugRenderer;
 
 module.exports = {
