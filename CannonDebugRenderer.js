@@ -241,3 +241,5 @@ THREE.CannonDebugRenderer.prototype = {
         }
     }
 };
+
+module.exports = { CannonDebugRenderer: THREE.CannonDebugRenderer }

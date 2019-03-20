@@ -1,9 +1,11 @@
 var THREE = require("three");
 var Zlib = require("./inflate.min").Zlib;
 var CannonHelper = require('./CannonHelper');
-require("./CannonDebugRenderer");
+var CannonDebugRenderer = require("./CannonDebugRenderer").CannonDebugRenderer;
 
 module.exports = {
+  Zlib,
+  CannonDebugRenderer,
   FBXLoader: (function() {
     THREE.FBXLoader = function(manager) {
       this.manager =
