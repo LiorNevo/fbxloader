@@ -1,0 +1,17 @@
+{
+  "name": "fbxloader",
+  "version": "1.0.0",
+  "main": "index.js",
+  "peerDependencies": {
+    "three": ">= 0.91"
+  },
+  "keywords": [
+    "fbxloader",
+    "fbx",
+    "three-fbxloader",
+    "threejs",
+    "three.js"
+  ],
+  "author": "Lior Nevo",
+  "license": "MIT"
+}
