@@ -7,6 +7,10 @@
  * @param {CANNON.World} world
  * @param {object} [options]
  */
+
+var CANNON = require('cannon')
+var THREE = require('three')
+
 THREE.CannonDebugRenderer = function(scene, world, options){
     options = options || {};
 
