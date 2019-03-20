@@ -1,3 +1,6 @@
+var THREE = require('three')
+var CANNON = require('cannon')
+
 class CannonHelper{
     constructor(scene){
         this.scene = scene;
