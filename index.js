@@ -1,4 +1,4 @@
-const THREE = require('three');
+var THREE = require('three');
 var Zlib = require('./inflate.min').Zlib;
 
 module.exports = ( function () {
