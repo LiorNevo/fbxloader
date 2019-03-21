@@ -5,9 +5,9 @@ var CannonDebugRenderer = require("./CannonDebugRenderer").CannonDebugRenderer;
 var Joystick = require('./Joystick').JoyStick;
 
 module.exports = {
-  Joystick,
-  Zlib,
-  CannonDebugRenderer,
+  Joystick: Joystick,
+  Zlib: Zlib,
+  CannonDebugRenderer: CannonDebugRenderer,
   FBXLoader: (function() {
     THREE.FBXLoader = function(manager) {
       this.manager =
@@ -3520,5 +3520,5 @@ module.exports = {
 	
 	return THREE.FBXLoader;
   })(),
-  CannonHelper
+  CannonHelper: CannonHelper
 };
