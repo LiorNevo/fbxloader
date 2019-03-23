@@ -3187,7 +3187,7 @@ module.exports = {
               }
             }
 
-            if (window.Zlib === undefined) {
+            if (Zlib === undefined) {
               console.error(
                 "THREE.FBXLoader: External library Inflate.min.js required, obtain or import from https://github.com/imaya/zlib.js"
               );
