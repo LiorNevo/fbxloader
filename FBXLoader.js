@@ -1,4 +1,5 @@
 var THREE = require("three");
+var Zlib = require("./inflate.min").Zlib;
 
 var FBXLoader = (function() {
   THREE.FBXLoader = function(manager) {
