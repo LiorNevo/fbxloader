@@ -7,7 +7,7 @@
  */
 var THREE = require('three');
 
-var GTLFLoader = ( function () {
+var GLTFLoader = ( function () {
 
 	function GLTFLoader( manager ) {
 
@@ -3399,4 +3399,4 @@ var GTLFLoader = ( function () {
 
 } )();
 
-module.exports = { GTLFLoader: GTLFLoader }
+module.exports = { GLTFLoader: GLTFLoader }
