@@ -15,7 +15,7 @@
 
 var THREE = require('three');
 
-var OrbitControls = function ( object, domElement ) {
+THREE.OrbitControls = function ( object, domElement ) {
 
 	this.object = object;
 
@@ -115,7 +115,7 @@ var OrbitControls = function ( object, domElement ) {
 		scope.object.zoom = scope.zoom0;
 
 		scope.object.updateProjectionMatrix();
-		scope.dispatchEvent( changeEvent );
+		scope.domElement.dispatchEvent( new Event(changeEvent.type)  );
 
 		scope.update();
 
@@ -207,7 +207,7 @@ var OrbitControls = function ( object, domElement ) {
 				lastPosition.distanceToSquared( scope.object.position ) > EPS ||
 				8 * ( 1 - lastQuaternion.dot( scope.object.quaternion ) ) > EPS ) {
 
-				scope.dispatchEvent( changeEvent );
+				scope.domElement.dispatchEvent( new Event(changeEvent.type) );
 
 				lastPosition.copy( scope.object.position );
 				lastQuaternion.copy( scope.object.quaternion );
@@ -238,7 +238,7 @@ var OrbitControls = function ( object, domElement ) {
 
 		window.removeEventListener( 'keydown', onKeyDown, false );
 
-		//scope.dispatchEvent( { type: 'dispose' } ); // should this be added here?
+		//scope.domElement.dispatchEvent( new Event({ type: 'dispose' }.type) ); // should this be added here?
 
 	};
 
@@ -747,7 +747,7 @@ var OrbitControls = function ( object, domElement ) {
 			document.addEventListener( 'mousemove', onMouseMove, false );
 			document.addEventListener( 'mouseup', onMouseUp, false );
 
-			scope.dispatchEvent( startEvent );
+			scope.domElement.dispatchEvent( new Event(startEvent.type) );
 
 		}
 
@@ -798,7 +798,7 @@ var OrbitControls = function ( object, domElement ) {
 		document.removeEventListener( 'mousemove', onMouseMove, false );
 		document.removeEventListener( 'mouseup', onMouseUp, false );
 
-		scope.dispatchEvent( endEvent );
+		scope.domElement.dispatchEvent( new Event(endEvent.type) );
 
 		state = STATE.NONE;
 
@@ -811,11 +811,11 @@ var OrbitControls = function ( object, domElement ) {
 		// event.preventDefault();
 		event.stopPropagation();
 
-		scope.dispatchEvent( startEvent );
+		scope.domElement.dispatchEvent( new Event(startEvent.type) );
 
 		handleMouseWheel( event );
 
-		scope.dispatchEvent( endEvent );
+		scope.domElement.dispatchEvent( new Event(endEvent.type) );
 
 	}
 
@@ -863,7 +863,7 @@ var OrbitControls = function ( object, domElement ) {
 
 		if ( state !== STATE.NONE ) {
 
-			scope.dispatchEvent( startEvent );
+			scope.domElement.dispatchEvent( new Event(startEvent.type) );
 
 		}
 
@@ -910,7 +910,7 @@ var OrbitControls = function ( object, domElement ) {
 
 		handleTouchEnd( event );
 
-		scope.dispatchEvent( endEvent );
+		scope.domElement.dispatchEvent( new Event(endEvent.type) );
 
 		state = STATE.NONE;
 
@@ -1071,4 +1071,4 @@ Object.defineProperties( THREE.OrbitControls.prototype, {
 
 } );
 
-module.exports = { OrbitalControls: OrbitalControls }
+module.exports = { OrbitalControls: THREE.OrbitControls }
