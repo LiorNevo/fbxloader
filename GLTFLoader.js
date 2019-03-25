@@ -3399,4 +3399,4 @@ var GLTFLoader = ( function () {
 
 } )();
 
-module.exports = { GLBLoader: GLTFLoader }
+module.exports = { GLTFLoader: GLTFLoader }
