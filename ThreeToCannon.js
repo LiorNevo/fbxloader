@@ -1,4 +1,5 @@
 var CANNON = require("cannon");
+var THREE = require("three");
 
 var PI_2 = Math.PI / 2;
 
