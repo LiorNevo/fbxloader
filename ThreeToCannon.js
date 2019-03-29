@@ -11,7 +11,7 @@ var Type = {
   MESH: "Trimesh"
 };
 
-const quickhull = (function() {
+var quickhull = (function() {
   var faces = [],
     faceStack = [],
     i,
@@ -416,7 +416,7 @@ const quickhull = (function() {
  * @param  {THREE.Object3D} object
  * @return {CANNON.Shape}
  */
-export const threeToCannon = function(object, options) {
+var threeToCannon = function(object, options) {
   options = options || {};
 
   var geometry;
@@ -798,3 +798,5 @@ function getMeshes(object) {
   });
   return meshes;
 }
+
+module.exports = { threeToCannon: threeToCannon }
