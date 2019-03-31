@@ -40,7 +40,7 @@ var JoyStick = function () {
 		}
 
 		this.destroy = function() {
-			_this.circle && _this.circle.parentNode.removeChild(_this.circle);
+			_this.circle && _this.circle.parentNode && _this.circle.parentNode.removeChild(_this.circle);
 		}
 	}
 
