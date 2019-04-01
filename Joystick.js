@@ -16,7 +16,7 @@ var JoyStick = function () {
 		thumb.style.cssText = "position: absolute; left: 20px; top: 20px; width: 40px; height: 40px; border-radius: 50%; background: #fff;";
 		this.circle.appendChild(thumb);
 		if (options.element) {
-			element.appendChild(this.circle)
+			options.element.appendChild(this.circle)
 		}
 		else {
 			document.body.appendChild(this.circle);
