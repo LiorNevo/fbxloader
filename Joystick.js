@@ -15,7 +15,12 @@ var JoyStick = function () {
 		var thumb = document.createElement("div");
 		thumb.style.cssText = "position: absolute; left: 20px; top: 20px; width: 40px; height: 40px; border-radius: 50%; background: #fff;";
 		this.circle.appendChild(thumb);
-		document.body.appendChild(this.circle);
+		if (options.element) {
+			element.appendChild(this.circle)
+		}
+		else {
+			document.body.appendChild(this.circle);
+		}
 		this.domElement = thumb;
 		this.maxRadius = options.maxRadius || 40;
 		this.maxRadiusSquared = this.maxRadius * this.maxRadius;
