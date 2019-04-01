@@ -11,15 +11,7 @@ var JoyStick = function () {
 		_classCallCheck(this, JoyStick);
 
 		this.circle = document.createElement("div");
-		this.circle.style.cssText = `position:absolute; 
-			bottom:35px; 
-			width:80px; 
-			height:80px; 
-			background:rgba(126, 126, 126, 0.5); 
-			border:${options.borderColor ? options.borderColor : '#444'} solid medium; 
-			border-radius:50%; 
-			left:50%; 
-			transform:translateX(-50%);`;
+		this.circle.style.cssText = 'position:absolute;bottom:35px; width:80px; height:80px; background:rgba(126, 126, 126, 0.5); border:' + (options.borderColor ? options.borderColor : '#444') + ' solid medium; border-radius:50%; left:50%; transform:translateX(-50%);';
 		var thumb = document.createElement("div");
 		thumb.style.cssText = "position: absolute; left: 20px; top: 20px; width: 40px; height: 40px; border-radius: 50%; background: #fff;";
 		this.circle.appendChild(thumb);
